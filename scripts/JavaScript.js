@@ -91,17 +91,17 @@ function getNavBar (pageFileName) {
     let navHTML = "";
 
     //Nav item
-    if (pageFileName == 'Index.html') { navHTML += "<a class='Active' title='Home'>Home</a>" }
-    else { navHTML += "<a href='Index.html'  title='Home'    >Home</a>" }
+    if (pageFileName == 'index.html') { navHTML += "<a class='Active' title='Home'>Home</a>" }
+    else { navHTML += "<a href='index.html'  title='Home'    >Home</a>" }
     //Nav item
-    if (pageFileName == 'Unit01.html') { navHTML += "<a class='Active' title='Unit 1 Outcome'>Unit 1 Outcome</a>" }
-    else { navHTML += "<a                href='Unit01.html'  title='Unit 1 Outcome'   >Unit 1 Outcome</a>" }
+    if (pageFileName == 'unit01.html') { navHTML += "<a class='Active' title='Unit 1 Outcome'>Unit 1 Outcome</a>" }
+    else { navHTML += "<a                href='unit01.html'  title='Unit 1 Outcome'   >Unit 1 Outcome</a>" }
     //Nav item
-    if (pageFileName == 'Unit02.html') { navHTML += "<a class='Active' title='Unit 2 Outcome'>Unit 2 Outcome</a>" }
-    else { navHTML += "<a                href='Unit02.html'  title='Unit 2 Outcome'   >Unit 2 Outcome</a>" }
+    if (pageFileName == 'unit02.html') { navHTML += "<a class='Active' title='Unit 2 Outcome'>Unit 2 Outcome</a>" }
+    else { navHTML += "<a                href='unit02.html'  title='Unit 2 Outcome'   >Unit 2 Outcome</a>" }
     //Nav item
-    if (pageFileName == 'About.html') { navHTML += "<a class='Active' title='About'>About</a>" }
-    else { navHTML += "<a                href='About.html'  title='About'   >About</a>" }
+    if (pageFileName == 'about.html') { navHTML += "<a class='Active' title='About'>About</a>" }
+    else { navHTML += "<a                href='about.html'  title='About'   >About</a>" }
     //Return the above navBar links
     return navHTML;
 }

@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/JavaScript.js"></script>
+    <link href="styles/SiteStyle.css" rel="stylesheet" />
+    <script>
+        function pageInitialise() {
+            //Page info
+            let pTitle1 = 'Template'
+            let pTitle2 = 'Template Page'
+            document.title = pTitle1 + ' - ' + pTitle2
+            document.getElementById('txtPageTitle').innerHTML = pTitle1;                                          //Write out the page title
+            document.getElementById('txtPageTitleSub').innerHTML = pTitle2;                                       //Write out the page sub title
+            document.getElementById('navButtons').innerHTML = getNavBar(location.pathname.split("/").slice(-1));  //Write out the NavBar
+            document.getElementById("txtFooterText").innerHTML = getPageFooterText();                             //Write out the footer message
+            document.getElementById("txtTools").innerHTML = getTools();                                           //Write out the Tool items
+            //addEventListener_BodyContentExpand()                                                                //Add the expand/collapse script
+        }
+    </script>
+</head>
+
+
+<body onload="pageInitialise()">
+
+    <div class="contentWrapper">
+        <div class="HeaderContent">
+            <div class="HeaderContentLogo">
+                <a href="Index.html" target="_top" title="Home">
+                    <img src="images/www2.png" alt="Home" class="HeaderContentLogoImg" />
+                </a>
+            </div>
+            <div class="HeaderContentTitle">
+                <h1 id="txtPageTitle">## Page Title ##</h1>
+                <h2 id="txtPageTitleSub">## Page Subtitle ##</h2>
+            </div>
+        </div>
+    </div>
+    <div class="contentWrapper">
+        <div class="NavContent">
+            <div class="NavContentInner" id="navButtons">getNavBar</div>
+        </div>
+    </div>
+    <div class="contentWrapper">
+        <div class="BodyContent">
+            <div class="BodyContentInner">
+                <h3>Template page - Section Title</h3>
+                <h4>Template page - Section subTitle</h4>
+                <!--#######################################################################################################-->
+                <!--#######################################################################################################-->
+            </div>
+        </div>
+    </div>
+    <div class="contentWrapper">
+        <div class="BodyContent">
+            <div class="BodyContentInner">
+                <h4>Get the tools</h4>
+                <p>Developer tools and resources that are used and referred to througout this blog:</p>
+                <div id="txtTools"></div>
+                <div class="FloatClear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="contentWrapper">
+        <div class="FooterContent">
+            <div id="txtFooterText" class="FooterContentText">getTools()</div>
+        </div>
+    </div>
+
+</body>
+</html>
