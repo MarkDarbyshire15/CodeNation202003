@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/JavaScript.js"></script>
+    <link href="styles/SiteStyle.css" rel="stylesheet" />
+    <script>
+        function pageInitialise() {
+            //Page info
+            let pTitle1 = 'Consultantancy blog'
+            let pTitle2 = 'Mark Darbyshire'
+            document.title = pTitle1 + ' - ' + pTitle2
+            document.getElementById('txtPageTitle').innerHTML = pTitle1;                                          //Write out the page title
+            document.getElementById('txtPageTitleSub').innerHTML = pTitle2;                                       //Write out the page sub title
+            document.getElementById('navButtons').innerHTML = getNavBar(location.pathname.split("/").slice(-1));  //Write out the NavBar
+            document.getElementById("txtFooterText").innerHTML = getPageFooterText();                             //Write out the footer message
+            //document.getElementById("txtTools").innerHTML = getTools();                                         //Write out the Tool items
+            //addEventListener_BodyContentExpand()                                                                //Add the expand/collapse script
+        }
+    </script>
+</head>
+<body onload="pageInitialise()">
+    <div class="contentWrapper">
+        <div class="HeaderContent">
+            <div class="HeaderContentLogo">
+                <a href="Index.html" target="_top" title="Home">
+                    <img src="images/www2.png" alt="Home" class="HeaderContentLogoImg" />
+                </a>
+            </div>
+            <div class="HeaderContentTitle">
+                <h1 id="txtPageTitle">## Page Title ##</h1>
+                <h2 id="txtPageTitleSub">## Page Subtitle ##</h2>
+            </div>
+        </div>
+    </div>
+    <div class="contentWrapper">
+        <div class="NavContent">
+            <div class="NavContentInner" id="navButtons">getNavBar</div>
+        </div>
+    </div>
+    <div class="contentWrapper">
+        <div class="BodyContent">
+            <div class="BodyContentInner">
+                <h3>About the author</h3>
+                <p>
+                    In March 2020, Mark having been unsuccessful in recent job searches and applications undertook a Code Nation code developers training course in Manchester.  Although Mark already has experience in other programming languages (primarily Visual Basic/VB.Net) he could see the benefit in re-skilling to fit in with the latest demand in the marketplace for web and mobile application developers.
+                    The course undertaken by Mark was Develop:Coding which is designed to take the student through the fundamentals of programming in HTML, CSS, JavaScript, get to grips with front-end and mobile application development, and find out what it’s like to work as a full-fledged professional coder.
+                </p>
+                <p>
+                    <a href="About.html" title="Read more about Mark Darbyshire" target="_self">Read more about Mark Darbyshire</a>
+                </p>
+                <h3>About the course and project work</h3>
+                <p>
+                    During the course Mark was set two distinct units of tasks and as part of those tasks was asked to deliver a working website (defined below) as well as documenting his understanding of the market place and his coding experience.  The results of Marks work are displayed as:
+                </p>
+
+
+                <div class="pnlBodyContentExpand">
+                    <h3>This website</h3>
+                    <a href="#Specification"></a>
+                    <h4>Specification</h4>
+                    <ul>
+                        <li>Build a functioning website</li>
+                        <li>Prepare appropriate content</li>
+                        <li>Organise information needed for webpages</li>
+                        <li>Implement appropriate formatting</li>
+                        <li>Design appropriate links to internal and external resources</li>
+                        <li>Ensure compatible document format</li>
+                        <li>Ensure error free pages that are fit for purpose</li>
+                    </ul>
+                    <h4>Testing and QA</h4>
+                    <ul>
+                        <li>Confirm full functionality is as planned</li>
+                        <li>Identify quality problems and respond to them accordingly</li>
+                        <li>Test against different workstation platforms (browsers)</li>
+                    </ul>
+                    <br />
+                </div>
+
+
+                <div class="pnlBodyContentExpand">
+                    <h3>The project</h3>
+                    <a href="Unit01.html">
+                        <h4>Unit 1: Improving Productivity with IT</h4>
+                        <ul>
+                            <li>Outcome 1: Plan, select and use appropriate IT systems and software to meet needs</li>
+                            <li>Outcome 2: Review and adapt the ongoing use of IT tools and systems to make sure that activities are successful</li>
+                            <li>Outcome 3: Develop and test solutions to improve ongoing use of IT tools and systems</li>
+                        </ul>
+                        <br />
+                    </a>
+
+                    <a href="Unit02.html">
+                        <h4>Unit 2: Website Software</h4>
+                        <ul>
+                            <li>Outcome 1: Create structures and styles for a webpage</li>
+                            <li>Outcome 2: Using website software tools to prepare content for sites</li>
+                            <li>Outcome 3: Publish websites</li>
+                        </ul>
+                        <br />
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<!--
+    <div class="contentWrapper">
+        <div class="BodyContent">
+            <div class="BodyContentInner">
+                <h3>Additional body content - Title</h3>
+                <h4>Additional body content - subTitle</h4>
+                <p>Text</p>
+            </div>
+        </div>
+    </div>
+    -->
+    <div class="contentWrapper">
+        <div class="FooterContent">
+            <div id="txtFooterText" class="FooterContentText"></div>
+        </div>
+    </div>
+</body>
+</html>

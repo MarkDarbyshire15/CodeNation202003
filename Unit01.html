@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/JavaScript.js"></script>
+    <link href="styles/SiteStyle.css" rel="stylesheet" />
+    <script>
+        function pageInitialise() {
+            //Page info
+            let pTitle1 = 'Unit 1'
+            let pTitle2 = 'Outcome 1,2 and 3'
+            document.title = pTitle1 + ' - ' + pTitle2
+            document.getElementById('txtPageTitle').innerHTML = pTitle1;                                          //Write out the page title
+            document.getElementById('txtPageTitleSub').innerHTML = pTitle2;                                       //Write out the page sub title
+            document.getElementById('navButtons').innerHTML = getNavBar(location.pathname.split("/").slice(-1));  //Write out the NavBar
+            document.getElementById("txtFooterText").innerHTML = getPageFooterText();                             //Write out the footer message
+            document.getElementById("txtTools").innerHTML = getTools();                                           //Write out the Tool items
+            addEventListener_BodyContentExpand()                                                                  //Add the expand/collapse script
+        }
+    </script>
+</head>
+<body onload="pageInitialise()">
+    <div class="contentWrapper">
+        <div class="HeaderContent">
+            <div class="HeaderContentLogo">
+                <a href="Index.html" target="_top" title="Home">
+                    <img src="images/www2.png" alt="Home" class="HeaderContentLogoImg" />
+                </a>
+            </div>
+            <div class="HeaderContentTitle">
+                <h1 id="txtPageTitle">## Page Title ##</h1>
+                <h2 id="txtPageTitleSub">## Page Subtitle ##</h2>
+            </div>
+        </div>
+    </div>
+    <div class="contentWrapper">
+        <div class="NavContent">
+            <div class="NavContentInner" id="navButtons">getNavBar</div>
+        </div>
+    </div>
+    <div class="contentWrapper">
+        <div class="BodyContent">
+            <div class="BodyContentInner">
+
+                <h3>Unit 1: Improving Productivity with IT</h3>
+
+                <h4>Outcome 1: Plan, select and use appropriate IT systems and software to meet needs</h4>
+
+                <h5>Scenario</h5>
+                <p>
+                    You are wanting to set up as a consultant.
+                    To prove your knowledge you want to start by creating a blog talking about yourself, why you are interested in technology and demonstrate how much you know.
+                    For each of the sections below asking you to describe, include around a paragraph of information about the topic.
+                </p>
+                <ul class="ulClear">
+                    <li class="btnBodyContentCollapse">
+                        <div>1.1 Describing the purpose of IT in modern business</div>
+                        <div class="pnlBodyContentCollapse">
+                            <p>
+                                IT in the modern business workplace is an important enabler that aids business success by addressing key aspects such as communication, collaboration, data, mobility and productivity.  Whilst a productive and empowered workforce can drive business expansion and success, the business ultimately depends upon its underlying IT infrastructure to support further growth and expansion.  IT systems in recent years have provided businesses with the scalable tools to solve complex problems, increase marketing, improve customer relations and manage resources all aspects that have led to increased productivity and efficiently.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="btnBodyContentCollapse">
+                        <div>
+                            1.2 Describing methods, skills and resources needed to complete digital projects successfully
+                        </div>
+                        <div class="pnlBodyContentCollapse">
+                            <p>Digital projects could be managed through several different methodologies such as Waterfall or PRINCE2 for example.  Although no methodology is currently a clear market leader some methodologies could potentially work better for some teams and/or projects, selection of such a methodology would be a matter of preference given the nature of the project.</p>
+                            <p>Although individual digital projects can vary in content significantly they all require various skills and resources the complete key phases such as scoping, planning, development, testing, deployment and maintenance.  Each project will require a specific set of different skills and resources both technical and non-technical some examples of which could be subject matter experts, developers, architects, stakeholders and/or sponsors.</p>
+                        </div>
+                    </li>
+                    <li class="btnBodyContentCollapse">
+                        <div>
+                            1.3 Plan and carry out tasks using IT – e.g. making your website. How will you plan it?
+                        </div>
+                        <div class="pnlBodyContentCollapse">
+                            <p>Building a website without a plan is similar to constructing a building without a design. Things will end up in the wrong place, functionality could be missing and features could be overlooked.  Planning an IT system ahead of time will give it a clear destination with deliverables that will prevent backtracking and cost escalation.  It is important that the following key tasks are addressed during the early phase of a projects lifecycle:</p>
+                            <ul>
+                                <li>
+                                    Purpose and goals<br />
+                                    understanding the end to end purpose including measurable metrics such as throughput and performance.
+                                </li>
+                                <li>
+                                    Budget and cost<br />
+                                    a clear understanding all of the end to end and ongoing maintenance costs is essential, this includes examples such as costs relating to hosting, development, consulting, design and delivery.
+                                </li>
+                                <li>
+                                    Understood roles<br />
+                                    ensure the team individuals know their role(s) and what is expected of them.
+                                </li>
+                                <li>
+                                    Content strategy<br />
+                                    content strategy is the way you plan to present your content over a period of time, this could include (but is not limited to) static and/or dynamically consumed content such as blogs, documents, presentations, pictures, social media feeds or video.
+                                </li>
+                                <li>
+                                    Overall structure<br />
+                                    Uunderstanding content presentation and features.
+                                </li>
+                                <li>
+                                    Basic framework<br />
+                                    Delivery of a basic framework (an initial mock-up) which is essentially an outline view of the end state of the deliverable that portrays a minimalised view of the result.
+                                </li>
+                                <li>
+                                    Designing<br />
+                                    Good website design includes both usability and aesthetics, it must be easy to navigate, read and find information as well as being fast stylish and adaptive.
+                                </li>
+                                <li>
+                                    Testing<br />
+                                    A well thought out QA and testing plan to ensure full functionality and scalability requirements have been met.
+                                </li>
+                            </ul>
+                            <p>
+                                Various IT tools can be used to aid the completion of them for example <a href="https://slack.com/" target="_blank" title="Slack">Slack</a>  or <a href="https://trello.com/markdarbyshire5/boards" target="_blank" title="Trello">Trello</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="btnBodyContentCollapse">
+                        <div>
+                            1.4 Describe the risks that might impact digital projects
+                        </div>
+                        <div class="pnlBodyContentCollapse">
+                            <p>Project risks are uncertainties that expose a project to potential failure to achieve its goals.  Identifying, evaluating and treating risk is an ongoing project management activity that seeks to improve project results by avoiding, reducing or transferring risks.  Project risk management also provides stakeholders with the visibility and clarifies accountability for any accepted risks.  The following types of risks are commonly encountered by projects:</p>
+                            <ul>
+                                <li>Scope creep - uncontrolled change to a projects scope</li>
+                                <li>Project definition – not understanding dependencies or assumptions</li>
+                                <li>Budget – failure to successfully estimate budget or cost overruns</li>
+                                <li>Resistance to change – defending the status quo and resisting the change</li>
+                                <li>Integration – underestimating the risk of change to technology, information and process</li>
+                                <li>Resource/Skills – failing to secure sufficient skilled workers</li>
+                                <li>3rd party – failure of a 3rd party to deliver contractual obligations</li>
+                                <li>Sponsor support – failure of the sponsor(s) to support the funding and change</li>
+                                <li>Operational risk – potential service outages and changes that disrupt the project delivery</li>
+                                <li>Benefit shortfall – not meeting the business case benefit specifics in the business case</li>
+                            </ul>
+                            <br />
+                        </div>
+                    </li>
+                    <li class="btnBodyContentCollapse">
+                        <div>
+                            1.5 Describe how you would go about selecting and using IT systems and software
+                        </div>
+                        <div class="pnlBodyContentCollapse">
+                            <p>Selecting the correct software for a business can be one of the most important decisions to make that would feed the growth and profits for several years to come.  Regardless of the size of your business a well thought-out plan will focus software decisions and help to make choices that will serve a business well in the future.</p>
+                            <p>The following steps are key to the overall selection:</p>
+                            <ul>
+                                <li>
+                                    Specifying requirements – define the requirements and identify key stakeholders, team members and subject matter experts.
+                                </li>
+                                <li>
+                                    Identify vendors – review the market place, research the internet, talk to vendor communities, create an outline RFP that meets the requirements and invite a vendor shortlist to participate further.
+                                </li>
+                                <li>
+                                    Attend vendor definition, review and demonstration sessions to confirm requirement, design and overall conformity.  Extend the definition of the RFP where required and iteratively review it until all requirements are met with all details finalised.
+                                </li>
+                                <li>
+                                    Reference site visits – visit or communication with reference sites for each of the vendors to learn valuable lessons from their experiences (both vendor and product).
+                                </li>
+                                <li>
+                                    Make a final decision - this should be done with reviewing all of the previous information where it should be clear which system to purchase.
+                                </li>
+                                <li>
+                                    Before progressions to on-boarding, commence with final contract negations with regards to service levels and formal obligation.
+                                </li>
+                            </ul>
+                            <br />
+                        </div>
+                    </li>
+                    <li class="btnBodyContentCollapse">
+                        <div>
+                            <strong class="styleError">
+                                1.6 Describe and provide analysis on how your chosen technologies have helped you achieve your outcomes.
+                            </strong>?
+                        </div>
+                        <div class="pnlBodyContentCollapse">
+                            <p>xxxxx xx x x x x x x xxx  xx xx xxx   x xx  x xx x x x x x x x x x x x x</p>
+                        </div>
+                    </li>
+                    <li class="btnBodyContentCollapse">
+                        <div>
+                            1.7 Describe legal guidelines and constraints that impact digital projects.
+                        </div>
+                        <div class="pnlBodyContentCollapse">
+                            <p>Introduced into effect in the European Union (EU) in May 2018 GDPR (General Data Protection Regulation) has kick-started a wave of global privacy laws that have forever changed how we use the internet (and marketing over the internet).  The selling of personal data to advertisers can be very profitable indeed (as demonstrated by global companies such as Google or Facebook), GDPR has therefore been introduced to tell companies of all size how they can and can't use your information.  The following are two of the most common GDPR terms today and understanding them is a vital part of becoming familiar with data protection in general:</p>
+                            <ul>
+                                <li>Privacy by design - when creating products (websites for example) data collection must be kept to a minimum and sufficient granular security measures must be introduced to ensure adequate protection in all places at all times.</li>
+                                <li>Consent - obtaining consent simply means asking permission data, collection practices must be written in a clear and simple language and must be explicitly agreed to.</li>
+                            </ul>
+                            <p>Under GDPR, methods that digital projects use to obtain consent are held to a much higher standard, this includes:</p>
+                            <ul>
+                                <li>Active opt-in – Consent will require a positive opt-in through clear affirmative action.</li>
+                                <li>Active opt-out – Individuals can withdraw consent as simply as opt-in.</li>
+                                <li>Data use – Individuals should get as much detail as possible about what their data will be processed for.</li>
+                                <li>Granular - Consent (or withdrawing consent) is to be available for each distinct processing activity.</li>
+                                <li>Unbundling – Consent requests must be separated from terms and conditions.</li>
+                                <li>Not a pre-condition of service - Consent should not be a precondition of service usage and/or signup.</li>
+                                <li>Named – It should be clear to the individual who will be processing their data including any third-parties.</li>
+                                <li>Right of access - Individuals have a right to access any data you hold on them (when, how and to what they consented to as well as the data that is held).</li>
+                                <li>Minimal collection and processing - marketers are only permitted to process the data that they really need and must have a legal justification for doing so.</li>
+                            </ul>
+                            <br />
+                        </div>
+                    </li>
+                </ul>
+
+                <h4>Outcome 2: Review and adapt the ongoing use of IT tools and systems to make sure that activities are successful</h4>
+                <h5>Scenario</h5>
+                <p>
+                    Now you have setup your blog, it’s time to get into the detail.
+                    You now need to critically review your website.
+                    To the bottom of your website add a review section that contains the following information.
+                </p>
+
+                <ul class="ulClear">
+                    <li class="btnBodyContentCollapse">
+                        <div>
+                            2.1 Review the ongoing use of IT tools and change approach as needed – in making your own website, are you happy with the tools you used?<br />
+                        </div>
+                        <div class="pnlBodyContentCollapse">
+                            <p>Whist writing this website I started developing code in code pen and progressed to VS code, the move to VS code was beneficial and time saving given that intellisense is much more advanced and informative in the latter.  Whilst in the ideas and development phases I tracked the tasks in Trello which was very beneficial in terms of an online to do/task list.</p>
+                        </div>
+                    </li>
+                    <li class="btnBodyContentCollapse">
+                        <div>
+                            2.2 Describe whether the IT tools selected were appropriate<br />
+                        </div>
+                        <div class="pnlBodyContentCollapse">
+                            <p>
+                                All of the IT tools that I’ve used whist undertaking this project have been fit for purpose, appropriate and have sufficiently supported all of the functionality that I’ve required both in terms of development and task management.
+                            </p>
+                            <p>
+                                Links to all of the toolsets and example code websites can be found at the bottom of this page.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="btnBodyContentCollapse">
+                        <div>
+                            2.3 Assess the strengths and weaknesses of your final project<br />
+                        </div>
+                        <div class="pnlBodyContentCollapse">
+                            <p>
+                                On the whole I am pleased with the presentation and control of my website; however, if I were to make changes for a future version then I might consider reducing the page size by presenting each outcome on a separate HTML page (with menu options to support this).
+                                Assuming that the page was broken down in this fashion then there would be more title information that’s above the line hence improving the reader’s overall experience.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="btnBodyContentCollapse">
+                        <div>
+                            2.4 Describe further improvements you can make to your project
+                        </div>
+                        <div class="pnlBodyContentCollapse">
+                            <p>
+                                As mentioned previously page size and menu structure could deliver an improved experience; however, the biggest improvements that can be made to the site are:
+                                <ul>
+                                    <li>Make it mobile responsive i.e. tablet and smart phone friendly.</li>
+                                    <li>Include / introduce a method of allowing readers to write comments.</li>
+                                    <li>Add themes and additional content (for example to aid blind/visually impaired, deaf, disabled and dyslexic visitors).</li>
+                                    <li>Implement additional metadata content</li>
+                                </ul>
+                                <br />
+                            </p>
+                        </div>
+                    </li>
+                    <li class="btnBodyContentCollapse">
+                        <div>
+                                2.5 Review outcomes to make sure they match requirements and are fit for purpose
+                        </div>
+                        <div class="pnlBodyContentCollapse">
+                            <p>
+                                This site is built to <a href="Index.html#Specification">specification</a> using HTML, CSS and JavaScript; it will be able to run under most web servers and in most client browsers (except out of scope mobile devices).  It has appropriately organised pages and content that are user friendly whilst being error free.
+                            </p>
+                            <p>
+                                Whilst testing it was found that modern browsers (Firefox, Safari, Chrome and Edge) all worked without issue.
+                            </p>
+                            <p>
+                                When testing with Microsoft Internet Explorer 11 it was found that the JavaScript arrow functions were not recognised (ES6 incompatibility) and as such any arrow functions have been removed and replaced with backwardly compatible functions that should remain in place until IE11 becomes end of life.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+
+                <h4>Outcome 3: Develop and test solutions to improve ongoing use of IT tools and systems</h4>
+                <h5>Scenario</h5>
+                <p>
+                    Continued from Outcome 2.
+                </p>
+                <ul class="ulClear">
+                    <li class="btnBodyContentCollapse">
+                        <div>
+                            3.1 Review the benefits and drawbacks of IT tools and systems used in terms of productivity and efficiency
+                        </div>
+                        <div class="pnlBodyContentCollapse">
+                            <p>
+                                Although the IT tools that have been used to produce this website are fit for purpose when used on a small scale, the development could have been considerably faster and perhaps better thought-out if it had been delivered as a team effort.
+                            </p>
+                            <p>
+                                Whilst individually developing the code it was apparent that all of the students were producing effectively the same thing and that could have been distributed amongst a small team in defined roles such as:
+                            </p>
+                            <ul>
+                                <li>Designer – team lead for the entire website deliverables</li>
+                                <li>Content – the author of text</li>
+                                <li>Presentation – the author of graphics and layout (styles)</li>
+                                <li>Coder – the author JavaScript</li>
+                            </ul>
+                            <br />
+                        </div>
+                    </li>
+                    <li class="btnBodyContentCollapse">
+                        <div>
+                            3.2 Describe ways to improve productivity and efficiency
+                        </div>
+                        <div class="pnlBodyContentCollapse">
+                            <p>
+                                To improve productivity and efficiency whilst building this website some techniques could have been used:
+                            </p>
+                            <ul>
+                                <li>Utilising shared code snippets that have been previously written or from a repository</li>
+                                <li>Utilising other shared resources such as graphics and styles again from an external repository</li>
+                            </ul>
+                            <br />
+                        </div>
+                    </li>
+                    <li class="btnBodyContentCollapse">
+                        <div>
+                            3.3 Develop solutions to improve own productivity using IT in digital projects
+                        </div>
+                        <div class="pnlBodyContentCollapse">
+                            <p>To improve my own future productivity I would certainly start to build modular reusable code blocks that can be used across other pages and potentially other websites.</p>
+                        </div>
+                    </li>
+                    <li class="btnBodyContentCollapse">
+                        <div>
+                            3.4 Describe how you would go about testing digital solutions
+                        </div>
+                        <div class="pnlBodyContentCollapse">
+                            <p>With particular reference to this website I’ve tested in various browsers, however, should it go out to a larger audience on the internet then I would add additional tests for example security penetration testing and performance load testing to ensure that the entire environment is fit for purpose.</p>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="contentWrapper">
+        <div class="BodyContent">
+            <div class="BodyContentInner">
+                <h4>Get the tools</h4>
+                <p>Developer tools and resources that are used and referred to througout this page:</p>
+                <div id="txtTools"></div>
+                <div class="FloatClear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="contentWrapper">
+        <div class="FooterContent">
+            <div id="txtFooterText" class="FooterContentText"></div>
+        </div>
+    </div>
+
+</body>
+</html>
