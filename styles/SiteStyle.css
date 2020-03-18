@@ -1,47 +1,46 @@
 /*Page*/
-
-.styleError {color:red; }
-
 html { -moz-box-sizing: border-box; box-sizing: border-box; scroll-behavior: smooth; }
-body { padding: 0; margin: 0; background-color: #dddddd; font-family: Arial, Helvetica, sans-serif; font-size: 16px; }
-/*body { min-width: 500px; }*/
+body { padding: 0; margin: 0; background-color: #dddddd; font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #333; }
 h1, h2, h3, h4, h5, h6 { color: darkblue; }
-p { color: black;  }
+p { }
     li a,
-    p a { color: black; text-decoration:underline; font-weight:bolder; }
-        p a:link { color: black; text-decoration: underline; font-weight: bolder; } /*Standard p unvisited link*/
-        p a:visited { color: black; text-decoration: underline; font-weight: bolder; } /*Standard p  visited link*/
-        p a:hover { color: black; text-decoration: underline; font-weight: bolder; } /*Standard p  mouse over link*/
-        p a:active { color: black; text-decoration: underline; font-weight: bolder; } /*Standard p  selected link*/     
-
-table { height: 1px; }
-tr { height: 100%; }
-td { height: 100%; }
-    td > div { height: 100%; }
+    p a { color: #000000; text-decoration: underline; }
+        p a:link { color: #000000; text-decoration: underline; font-weight: bolder; }
+        /*Standard p unvisited link*/
+        p a:visited { color: #000000; text-decoration: underline; font-weight: bolder; }
+        /*Standard p  visited link*/
+        p a:hover { color: #000000; text-decoration: underline; font-weight: bolder; }
+        /*Standard p  mouse over link*/
+        p a:active { color: #000000; text-decoration: underline; font-weight: bolder; }
 .FloatClear { clear: both; }
 .FloatLeft { float: left; }
 .FloatRight { float: right; }
+.ulClear { list-style-type: none; }
 .contentWrapper { width: 100%; }
 
-/*Header*/
-.HeaderContent { background-color: darkblue; }
-.HeaderContentLogoImg { width: 80px; height: 80px; }
-.HeaderContentLogo { width: 80px; height: 80px; padding-top: 0.5em; padding-left: 0.5em; float: left; }
-.HeaderContentTitle { height: 80px; }
-    .HeaderContentTitle h1 { margin-top: 0em; margin-bottom: 0em; color: white; text-indent: 0.5em; padding-top: 0.20em; white-space: nowrap; }
-    .HeaderContentTitle h2 { margin-top: 0em; margin-bottom: 0em; color: white; text-indent: 0.7em; padding-top: 0.1em; white-space: nowrap; }
+/*flex Header style*/
+.HeaderContent { background-color: darkblue; color: white; }
+.fcTitle { display: flex; justify-content: center; width: 100%; }
+.fcTitleBox { color: white; /*font-size: 20px;*/ text-align: center; padding: 5px; margin: 0; flex: 0; }
+.fcTitleBoxImage { }
+    .fcTitleBoxImage img { width: 80px; height: 80px; }
+.fcTitleBoxTitle { flex: auto; text-align: left; }
+    .fcTitleBoxTitle h1 { margin-top: 0em; margin-bottom: 0em; color: white; text-indent: 0.1em; padding-top: 0.20em; white-space: nowrap; }
+    .fcTitleBoxTitle h2 { margin-top: 0em; margin-bottom: 0em; color: white; text-indent: 0.1em; padding-top: 0.20em; white-space: nowrap; }
 
-/*Navigation*/
-.NavContent { background-color: darkblue; color: white; width: 100%; text-align: right; }
-.NavContentInner { margin-right: 2em; }
-.NavContent a { color: #f2f2f2; text-align: center; text-decoration: none; vertical-align: top; font-weight: bold; margin-left: 0.2em; margin-right: 0.2em; padding: 0.2em 0.6em 1.25em 0.6em; border-radius: 0.5em; }
-    .NavContent a:hover,
-    .NavContent .Active { background-color: #ddd; color: black; text-decoration: underline; cursor:pointer; }
+/*flex Navigation menu style*/
+.NavContent { background-color: darkblue; color: white; width: 100%; }
+.fcNav { display: flex; justify-content: center; width: 100%; }
+.fcNavBox { color: white; font-size:1.1em; text-align: center; padding: 5px; margin: 0em; flex: 0; }
+.fcNavBoxSpacer { flex: auto; }
+.fcNavBoxItem { }
+    .fcNavBoxItem a { color: #f2f2f2; text-align: center; text-decoration: none; vertical-align: top; font-weight: bold; margin-left: 0em; margin-right: .4em; padding: 0.2em 0.6em 1.25em 0.6em; border-radius: 0.5em; white-space: nowrap; }
+        .fcNavBoxItem a:hover,
+        .fcNavBoxItem .Active { background-color: #ddd; color: black; text-decoration: underline; cursor: pointer; }
 
 /*Main body*/
 .BodyContent { width: 100%; }
 .BodyContentInner { margin: 0px 1em; }
-.ulClear { list-style-type: none; }
 .pnlBodyContent { padding: 1em; }
 .pnlBodyContent,
 .pnlBodyContentCollapse { border-radius: 1em; cursor: auto; background-color: lightyellow; border: 1px solid darkblue; }
@@ -51,9 +50,11 @@ td { height: 100%; }
     .btnBodyContentCollapse:before { font-size: 13px; float: left; margin-right: 5px; }
 .btnBodyContentExpand:before { content: "\2796"; /* Unicode character for "minus" sign (-) */ }
 .btnBodyContentCollapse:before { content: '\02795'; /* Unicode character for "plus" sign (+) */ }
-
 .pnlBodyContentExpand { border-radius: 1em; cursor: auto; background-color: lightyellow; border: 1px solid darkblue; }
 .pnlBodyContentExpand { margin: 0.5em 0 0.75em; padding: 0 1em; overflow: hidden; }
+.liUnitQuestionNum { float: left; overflow: hidden; }
+    .liUnitQuestionNum:after { content: "\00a0 "; }
+.liUnitQuestionTxt { overflow: hidden; }
 
 /*Footer*/
 .FooterContent { width: 100%; }
@@ -68,14 +69,13 @@ td { height: 100%; }
 .divSocialMediaRight { margin-left: 50%; }
 .imgSocialMedia { width: 100px; height: 100px; margin: 0em 0em 0em 0em; border: none; }
 
-/*Get the tools table*/
-.tblToolTable { width: 100%; font-size: medium; }
-.tblToolTableTD { vertical-align: top; text-align: center; padding: 0.25em; }
-.divTool { background-color: white; border: 1px solid darkblue; width: 100%; }
-    .divTool a { color: darkblue; text-decoration: underline; }
-.divToolContent { height: 100%; }
-.divToolInner { padding: 0; }
-.divTool .divToolInfTitle { display: block; background-color: darkblue; text-decoration: underline; font-size: smaller; color: white; padding: 0.1em 0.2em; }
-.divTool .divToolInfImg { width: 60px; height: 60px; padding: 0.5em 0 0 0; }
-.divTool .divToolInfText { display: block; font-size: smaller; text-align: left; padding: 0 0.25em 0.5em; }
-
+/*flex tools information style*/
+.fcToolsBox { display: flex; flex-wrap: wrap; font-size: small; width: 100%; }
+.fcToolsBoxItem { flex: 1; text-align: center; margin: 0.125em; background-color: white; border: 1px solid darkblue; }
+.fcToolsBoxItem { min-width: 120px; border-top-left-radius: 1em; border-bottom-right-radius: 1em; }
+.fcToolsBoxItemTitle { border-top-left-radius: 1em; font-weight: bolder; }
+.fcToolsBoxItemTitle { background-color: darkblue; color: white; padding: 0.25em; }
+.fcToolsBoxItemTitle { height: 3.5em; vertical-align: middle; }
+.fcToolsBoxItemLink { margin-top: 0.75em; }
+    .fcToolsBoxItemLink img { width: 50px; height: 50px; }
+.fcToolsBoxItemDesc { padding: 0.25em; }

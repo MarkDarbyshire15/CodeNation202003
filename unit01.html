@@ -13,8 +13,8 @@
             document.title = pTitle1 + ' - ' + pTitle2
             document.getElementById('txtPageTitle').innerHTML = pTitle1;                                          //Write out the page title
             document.getElementById('txtPageTitleSub').innerHTML = pTitle2;                                       //Write out the page sub title
-            document.getElementById('navButtons').innerHTML = getNavBar(location.pathname.split("/").slice(-1));  //Write out the NavBar
             document.getElementById("txtFooterText").innerHTML = getPageFooterText();                             //Write out the footer message
+            document.getElementById('navButtons').innerHTML = getNavBar(location.pathname.split("/").slice(-1));  //Write out the NavBar
             document.getElementById("txtTools").innerHTML = getTools();                                           //Write out the Tool items
             addEventListener_BodyContentExpand()                                                                  //Add the expand/collapse script
         }
@@ -23,20 +23,21 @@
 <body onload="pageInitialise()">
     <div class="contentWrapper">
         <div class="HeaderContent">
-            <div class="HeaderContentLogo">
-                <a href="Index.html" target="_top" title="Home">
-                    <img src="images/www2.png" alt="Home" class="HeaderContentLogoImg" />
-                </a>
-            </div>
-            <div class="HeaderContentTitle">
-                <h1 id="txtPageTitle">## Page Title ##</h1>
-                <h2 id="txtPageTitleSub">## Page Subtitle ##</h2>
+            <div class="fcTitle">
+                <div class="fcTitleBox fcTitleBoxImage">
+                    <a href="Index.html" target="_top" title="Home"><img src="images/www2.png" alt="Home" /></a>
+                </div>
+                <div class="fcTitleBox fcTitleBoxTitle">
+                    <h1 id="txtPageTitle">Title</h1>
+                    <h2 id="txtPageTitleSub">TitleSub</h2>
+                </div>
             </div>
         </div>
     </div>
     <div class="contentWrapper">
         <div class="NavContent">
-            <div class="NavContentInner" id="navButtons">getNavBar</div>
+            <div id="navButtons" class="fcNav">
+            </div>
         </div>
     </div>
     <div class="contentWrapper">
@@ -55,7 +56,10 @@
                 </p>
                 <ul class="ulClear">
                     <li class="btnBodyContentCollapse">
-                        <div>1.1 Describing the purpose of IT in modern business</div>
+                        <div>
+                            <div class="liUnitQuestionNum">1.1</div>
+                            <div class="liUnitQuestionTxt">Describing the purpose of IT in modern business</div>
+                        </div>
                         <div class="pnlBodyContentCollapse">
                             <p>
                                 IT in the modern business workplace is an important enabler that aids business success by addressing key aspects such as communication, collaboration, data, mobility and productivity.  Whilst a productive and empowered workforce can drive business expansion and success, the business ultimately depends upon its underlying IT infrastructure to support further growth and expansion.  IT systems in recent years have provided businesses with the scalable tools to solve complex problems, increase marketing, improve customer relations and manage resources all aspects that have led to increased productivity and efficiently.
@@ -64,7 +68,8 @@
                     </li>
                     <li class="btnBodyContentCollapse">
                         <div>
-                            1.2 Describing methods, skills and resources needed to complete digital projects successfully
+                            <div class="liUnitQuestionNum">1.2</div>
+                            <div class="liUnitQuestionTxt">Describing methods, skills and resources needed to complete digital projects successfully</div>
                         </div>
                         <div class="pnlBodyContentCollapse">
                             <p>Digital projects could be managed through several different methodologies such as Waterfall or PRINCE2 for example.  Although no methodology is currently a clear market leader some methodologies could potentially work better for some teams and/or projects, selection of such a methodology would be a matter of preference given the nature of the project.</p>
@@ -73,7 +78,8 @@
                     </li>
                     <li class="btnBodyContentCollapse">
                         <div>
-                            1.3 Plan and carry out tasks using IT – e.g. making your website. How will you plan it?
+                            <div class="liUnitQuestionNum">1.3</div>
+                            <div class="liUnitQuestionTxt">Plan and carry out tasks using IT – e.g. making your website. How will you plan it?</div>
                         </div>
                         <div class="pnlBodyContentCollapse">
                             <p>Building a website without a plan is similar to constructing a building without a design. Things will end up in the wrong place, functionality could be missing and features could be overlooked.  Planning an IT system ahead of time will give it a clear destination with deliverables that will prevent backtracking and cost escalation.  It is important that the following key tasks are addressed during the early phase of a projects lifecycle:</p>
@@ -118,7 +124,8 @@
                     </li>
                     <li class="btnBodyContentCollapse">
                         <div>
-                            1.4 Describe the risks that might impact digital projects
+                            <div class="liUnitQuestionNum">1.4</div>
+                            <div class="liUnitQuestionTxt">Describe the risks that might impact digital projects</div>
                         </div>
                         <div class="pnlBodyContentCollapse">
                             <p>Project risks are uncertainties that expose a project to potential failure to achieve its goals.  Identifying, evaluating and treating risk is an ongoing project management activity that seeks to improve project results by avoiding, reducing or transferring risks.  Project risk management also provides stakeholders with the visibility and clarifies accountability for any accepted risks.  The following types of risks are commonly encountered by projects:</p>
@@ -139,7 +146,8 @@
                     </li>
                     <li class="btnBodyContentCollapse">
                         <div>
-                            1.5 Describe how you would go about selecting and using IT systems and software
+                            <div class="liUnitQuestionNum">1.5</div>
+                            <div class="liUnitQuestionTxt">Describe how you would go about selecting and using IT systems and software</div>
                         </div>
                         <div class="pnlBodyContentCollapse">
                             <p>Selecting the correct software for a business can be one of the most important decisions to make that would feed the growth and profits for several years to come.  Regardless of the size of your business a well thought-out plan will focus software decisions and help to make choices that will serve a business well in the future.</p>
@@ -169,17 +177,37 @@
                     </li>
                     <li class="btnBodyContentCollapse">
                         <div>
-                            <strong class="styleError">
-                                1.6 Describe and provide analysis on how your chosen technologies have helped you achieve your outcomes.
-                            </strong>?
+                            <div class="liUnitQuestionNum">1.6</div>
+                            <div class="liUnitQuestionTxt">Describe and provide analysis on how your chosen technologies have helped you achieve your outcomes.</div>
                         </div>
                         <div class="pnlBodyContentCollapse">
-                            <p>xxxxx xx x x x x x x xxx  xx xx xxx   x xx  x xx x x x x x x x x x x x x</p>
+                            <p>Whilst writing this website various tools have been used for task management and authoring code and each tool has been used with a particular role in mind:</p>
+                            <ul>
+                                <li>
+                                    Code development<br />
+                                    VS Code has been used to develop the code (HTML, CSS and JavaScript) after the code was developed it was uploaded to GitHub.  As the code was refreshed over a period of time later copies were uploaded and committed to the repository.  Now that the GitHub repository is available then so is the capability to roll back to previous versions and to perform test publishing.<br />
+                                    <a href="https://markdarbyshire15.github.io/CodeNation202003/"
+                                       title="View this website in GitHub"
+                                       target="_blank">View this website in GitHub</a>
+                                </li>
+                                
+                                <li>
+                                    Task management<br />
+                                    Trello has been very useful in terms of tracking open tasks, as the build progressed; any considerations and thoughts were put into Trello so that they could be addressed later and not forgotten about.
+                                </li>
+
+                                <li>
+                                    Communication<br />
+                                    Whist working in a room of developers there has been on occasion the requirement to pass information amongst each other.  As all of the developers were only accessible through shared tools over the internet Slack was ideal to fulfil the role.
+                                </li>
+                            </ul>
+                            <br />
                         </div>
                     </li>
                     <li class="btnBodyContentCollapse">
                         <div>
-                            1.7 Describe legal guidelines and constraints that impact digital projects.
+                            <div class="liUnitQuestionNum">1.7</div>
+                            <div class="liUnitQuestionTxt">Describe legal guidelines and constraints that impact digital projects.</div>
                         </div>
                         <div class="pnlBodyContentCollapse">
                             <p>Introduced into effect in the European Union (EU) in May 2018 GDPR (General Data Protection Regulation) has kick-started a wave of global privacy laws that have forever changed how we use the internet (and marketing over the internet).  The selling of personal data to advertisers can be very profitable indeed (as demonstrated by global companies such as Google or Facebook), GDPR has therefore been introduced to tell companies of all size how they can and can't use your information.  The following are two of the most common GDPR terms today and understanding them is a vital part of becoming familiar with data protection in general:</p>
@@ -215,15 +243,25 @@
                 <ul class="ulClear">
                     <li class="btnBodyContentCollapse">
                         <div>
-                            2.1 Review the ongoing use of IT tools and change approach as needed – in making your own website, are you happy with the tools you used?<br />
+                            <div class="liUnitQuestionNum">2.1</div>
+                            <div class="liUnitQuestionTxt">Review the ongoing use of IT tools and change approach as needed – in making your own website, are you happy with the tools you used?</div>
                         </div>
                         <div class="pnlBodyContentCollapse">
-                            <p>Whist writing this website I started developing code in code pen and progressed to VS code, the move to VS code was beneficial and time saving given that intellisense is much more advanced and informative in the latter.  Whilst in the ideas and development phases I tracked the tasks in Trello which was very beneficial in terms of an online to do/task list.</p>
+                            <p>
+                                Whist writing this website I started developing code in CodePen but found it a little restrictive as my internet connection was not as stable as I would have wished for so I progressed to a locally installed instance of VS code that works offline.
+                            </p>
+                            <p>
+                                This move to VS Code was beneficial and time saving given that intellisense is much more advanced and informative.
+                            </p>
+                            <p>
+                                Whilst in the ideas and development phases I tracked the tasks in Trello which was very beneficial in terms of an online to do/task list that could be revisited at any time.
+                            </p>
                         </div>
                     </li>
                     <li class="btnBodyContentCollapse">
                         <div>
-                            2.2 Describe whether the IT tools selected were appropriate<br />
+                            <div class="liUnitQuestionNum">2.2</div>
+                            <div class="liUnitQuestionTxt">Describe whether the IT tools selected were appropriate</div>
                         </div>
                         <div class="pnlBodyContentCollapse">
                             <p>
@@ -236,7 +274,8 @@
                     </li>
                     <li class="btnBodyContentCollapse">
                         <div>
-                            2.3 Assess the strengths and weaknesses of your final project<br />
+                            <div class="liUnitQuestionNum">2.3</div>
+                            <div class="liUnitQuestionTxt">Assess the strengths and weaknesses of your final project</div>
                         </div>
                         <div class="pnlBodyContentCollapse">
                             <p>
@@ -247,7 +286,8 @@
                     </li>
                     <li class="btnBodyContentCollapse">
                         <div>
-                            2.4 Describe further improvements you can make to your project
+                            <div class="liUnitQuestionNum">2.4</div>
+                            <div class="liUnitQuestionTxt">Describe further improvements you can make to your project</div>
                         </div>
                         <div class="pnlBodyContentCollapse">
                             <p>
@@ -264,7 +304,8 @@
                     </li>
                     <li class="btnBodyContentCollapse">
                         <div>
-                                2.5 Review outcomes to make sure they match requirements and are fit for purpose
+                            <div class="liUnitQuestionNum">2.5</div>
+                            <div class="liUnitQuestionTxt">Review outcomes to make sure they match requirements and are fit for purpose</div>
                         </div>
                         <div class="pnlBodyContentCollapse">
                             <p>
@@ -288,7 +329,8 @@
                 <ul class="ulClear">
                     <li class="btnBodyContentCollapse">
                         <div>
-                            3.1 Review the benefits and drawbacks of IT tools and systems used in terms of productivity and efficiency
+                            <div class="liUnitQuestionNum">3.1</div>
+                            <div class="liUnitQuestionTxt">Review the benefits and drawbacks of IT tools and systems used in terms of productivity and efficiency</div>
                         </div>
                         <div class="pnlBodyContentCollapse">
                             <p>
@@ -308,7 +350,8 @@
                     </li>
                     <li class="btnBodyContentCollapse">
                         <div>
-                            3.2 Describe ways to improve productivity and efficiency
+                            <div class="liUnitQuestionNum">3.2</div>
+                            <div class="liUnitQuestionTxt">Describe ways to improve productivity and efficiency</div>
                         </div>
                         <div class="pnlBodyContentCollapse">
                             <p>
@@ -323,7 +366,8 @@
                     </li>
                     <li class="btnBodyContentCollapse">
                         <div>
-                            3.3 Develop solutions to improve own productivity using IT in digital projects
+                            <div class="liUnitQuestionNum">3.3</div>
+                            <div class="liUnitQuestionTxt">Develop solutions to improve own productivity using IT in digital projects</div>
                         </div>
                         <div class="pnlBodyContentCollapse">
                             <p>To improve my own future productivity I would certainly start to build modular reusable code blocks that can be used across other pages and potentially other websites.</p>
@@ -331,7 +375,8 @@
                     </li>
                     <li class="btnBodyContentCollapse">
                         <div>
-                            3.4 Describe how you would go about testing digital solutions
+                            <div class="liUnitQuestionNum">3.4</div>
+                            <div class="liUnitQuestionTxt">Describe how you would go about testing digital solutions</div>
                         </div>
                         <div class="pnlBodyContentCollapse">
                             <p>With particular reference to this website I’ve tested in various browsers, however, should it go out to a larger audience on the internet then I would add additional tests for example security penetration testing and performance load testing to ensure that the entire environment is fit for purpose.</p>
@@ -346,13 +391,13 @@
     <div class="contentWrapper">
         <div class="BodyContent">
             <div class="BodyContentInner">
-                <h4>Get the tools</h4>
-                <p>Developer tools and resources that are used and referred to througout this page:</p>
-                <div id="txtTools"></div>
-                <div class="FloatClear"></div>
+                <div id="txtTools" class="fcToolsBox">
+                    getTools()
+                </div>
             </div>
         </div>
     </div>
+
     <div class="contentWrapper">
         <div class="FooterContent">
             <div id="txtFooterText" class="FooterContentText"></div>

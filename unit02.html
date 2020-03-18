@@ -13,8 +13,8 @@
             document.title = pTitle1 + ' - ' + pTitle2
             document.getElementById('txtPageTitle').innerHTML = pTitle1;                                          //Write out the page title
             document.getElementById('txtPageTitleSub').innerHTML = pTitle2;                                       //Write out the page sub title
-            document.getElementById('navButtons').innerHTML = getNavBar(location.pathname.split("/").slice(-1));  //Write out the NavBar
             document.getElementById("txtFooterText").innerHTML = getPageFooterText();                             //Write out the footer message
+            document.getElementById('navButtons').innerHTML = getNavBar(location.pathname.split("/").slice(-1));  //Write out the NavBar
             document.getElementById("txtTools").innerHTML = getTools();                                           //Write out the Tool items
             addEventListener_BodyContentExpand()                                                                  //Add the expand/collapse script
         }
@@ -23,20 +23,21 @@
 <body onload="pageInitialise()">
     <div class="contentWrapper">
         <div class="HeaderContent">
-            <div class="HeaderContentLogo">
-                <a href="Index.html" target="_top" title="Home">
-                    <img src="images/www2.png" alt="Home" class="HeaderContentLogoImg" />
-                </a>
-            </div>
-            <div class="HeaderContentTitle">
-                <h1 id="txtPageTitle">## Page Title ##</h1>
-                <h2 id="txtPageTitleSub">## Page Subtitle ##</h2>
+            <div class="fcTitle">
+                <div class="fcTitleBox fcTitleBoxImage">
+                    <a href="Index.html" target="_top" title="Home"><img src="images/www2.png" alt="Home" /></a>
+                </div>
+                <div class="fcTitleBox fcTitleBoxTitle">
+                    <h1 id="txtPageTitle">Title</h1>
+                    <h2 id="txtPageTitleSub">TitleSub</h2>
+                </div>
             </div>
         </div>
     </div>
     <div class="contentWrapper">
         <div class="NavContent">
-            <div class="NavContentInner" id="navButtons">getNavBar</div>
+            <div id="navButtons" class="fcNav">
+            </div>
         </div>
     </div>
     <div class="contentWrapper">
@@ -56,7 +57,10 @@
                 </p>
                 <ul class="ulClear">
                     <li class="btnBodyContentCollapse">
-                        <div>1.1 Describing the content and layout for each page</div>
+                        <div>
+                            <div class="liUnitQuestionNum">1.1</div>
+                            <div class="liUnitQuestionTxt">Describing the content and layout for each page</div>
+                        </div>
                         <div class="pnlBodyContentCollapse">
                             <p>This design is divided in 4 distinct pages:</p>
                             <ul>
@@ -96,7 +100,10 @@
                         </div>
                     </li>-->
                     <li class="btnBodyContentCollapse">
-                        <div>1.5 Describing copyright and other constraints affecting websites</div>
+                        <div>
+                            <div class="liUnitQuestionNum">1.5</div>
+                            <div class="liUnitQuestionTxt">Describing copyright and other constraints affecting websites</div>
+                        </div>
                         <div class="pnlBodyContentCollapse">
                             <p>
                                 Copyright and infringement thereof is a complex subject in the UK; as most public domain websites are actually globally accessible it becomes vastly more complicated.
@@ -111,7 +118,10 @@
                         </div>
                     </li>
                     <li class="btnBodyContentCollapse">
-                        <div>1.6 Describing access issues that need taking into account - describe issues that people with disabilities may face when using webpages and how we can overcome them</div>
+                        <div>
+                            <div class="liUnitQuestionNum">1.6</div>
+                            <div class="liUnitQuestionTxt">Describing access issues that need taking into account - describe issues that people with disabilities may face when using webpages and how we can overcome them</div>
+                        </div>
                         <div class="pnlBodyContentCollapse">
                             <p>
                                 Some considerations to take into account when designing a website that could be accessed by an audience that has any type of disability (non-disabled users also benefit in some cases):
@@ -130,7 +140,10 @@
                         </div>
                     </li>
                     <li class="btnBodyContentCollapse">
-                        <div>1.7 Describe which are the appropriate filetypes for websites</div>
+                        <div>
+                            <div class="liUnitQuestionNum">1.7</div>
+                            <div class="liUnitQuestionTxt">Describe which are the appropriate filetypes for websites</div>
+                        </div>
                         <div class="pnlBodyContentCollapse">
                             <p>
                                 Various type of files are commonly found on the internet or example:
@@ -164,10 +177,15 @@
                         </div>
                     </li>
                     <li class="btnBodyContentCollapse">
-                        <div>1.8 Storing and retrieving files effectively</div>
+                        <div>
+                            <div class="liUnitQuestionNum">1.8</div>
+                            <div class="liUnitQuestionTxt">Storing and retrieving files effectively</div>
+                        </div>
                         <div class="pnlBodyContentCollapse">
                             <p>
-                                It is important that the website code and any uploaded files are kept separate.  In an ideal world a security strategy should be in place so that up loadable and changeable files are stored in a read/write area of storage with clear separation from that of the website static code and content that should only have read access.
+                                It is important that the website code and any uploaded files are kept separate.<br />
+                                In an ideal world a security strategy should be in place so that up loadable and changeable files are stored in a read/write areas of storage with clear separation from that of the website static code and content that should only have read access.<br />
+                                In terms of potentially increasing performance and availability the use of internet based content delivery should be considered.
                             </p>
                         </div>
                     </li>
@@ -219,7 +237,6 @@
                         </div>
                     </li>
                 </ul>-->
-
                 <!--<h4>Outcome 3: Publish websites</h4>-->
                 <!--<h5>Scenario</h5>
                 <p>
@@ -262,13 +279,13 @@
     <div class="contentWrapper">
         <div class="BodyContent">
             <div class="BodyContentInner">
-                <h4>Get the tools</h4>
-                <p>Developer tools and resources that are used and referred to througout this page:</p>
-                <div id="txtTools"></div>
-                <div class="FloatClear"></div>
+                <div id="txtTools" class="fcToolsBox">
+                    getTools()
+                </div>
             </div>
         </div>
     </div>
+
     <div class="contentWrapper">
         <div class="FooterContent">
             <div id="txtFooterText" class="FooterContentText"></div>

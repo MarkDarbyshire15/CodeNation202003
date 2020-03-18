@@ -13,8 +13,8 @@
             document.title = pTitle1 + ' - ' + pTitle2
             document.getElementById('txtPageTitle').innerHTML = pTitle1;                                          //Write out the page title
             document.getElementById('txtPageTitleSub').innerHTML = pTitle2;                                       //Write out the page sub title
-            document.getElementById('navButtons').innerHTML = getNavBar(location.pathname.split("/").slice(-1));  //Write out the NavBar
             document.getElementById("txtFooterText").innerHTML = getPageFooterText();                             //Write out the footer message
+            document.getElementById('navButtons').innerHTML = getNavBar(location.pathname.split("/").slice(-1));  //Write out the NavBar
             //document.getElementById("txtTools").innerHTML = getTools();                                         //Write out the Tool items
             //addEventListener_BodyContentExpand()                                                                //Add the expand/collapse script
         }
@@ -23,20 +23,21 @@
 <body onload="pageInitialise()">
     <div class="contentWrapper">
         <div class="HeaderContent">
-            <div class="HeaderContentLogo">
-                <a href="Index.html" target="_top" title="Home">
-                    <img src="images/www2.png" alt="Home" class="HeaderContentLogoImg" />
-                </a>
-            </div>
-            <div class="HeaderContentTitle">
-                <h1 id="txtPageTitle">## Page Title ##</h1>
-                <h2 id="txtPageTitleSub">## Page Subtitle ##</h2>
+            <div class="fcTitle">
+                <div class="fcTitleBox fcTitleBoxImage">
+                    <a href="Index.html" target="_top" title="Home"><img src="images/www2.png" alt="Home" /></a>
+                </div>
+                <div class="fcTitleBox fcTitleBoxTitle">
+                    <h1 id="txtPageTitle">Title</h1>
+                    <h2 id="txtPageTitleSub">TitleSub</h2>
+                </div>
             </div>
         </div>
     </div>
     <div class="contentWrapper">
         <div class="NavContent">
-            <div class="NavContentInner" id="navButtons">getNavBar</div>
+            <div id="navButtons" class="fcNav">
+            </div>
         </div>
     </div>
     <div class="contentWrapper">
@@ -81,41 +82,62 @@
 
                 <div class="pnlBodyContentExpand">
                     <h3>The project</h3>
-                    <a href="Unit01.html">
-                        <h4>Unit 1: Improving Productivity with IT</h4>
-                        <ul>
-                            <li>Outcome 1: Plan, select and use appropriate IT systems and software to meet needs</li>
-                            <li>Outcome 2: Review and adapt the ongoing use of IT tools and systems to make sure that activities are successful</li>
-                            <li>Outcome 3: Develop and test solutions to improve ongoing use of IT tools and systems</li>
-                        </ul>
-                        <br />
-                    </a>
+                    <h4>Unit 1: Improving Productivity with IT</h4>
+                    <ul>
+                        <li>
+                            <a href="Unit01.html">
+                                Outcome 1: Plan, select and use appropriate IT systems and software to meet needs
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Unit01.html">
+                                Outcome 2: Review and adapt the ongoing use of IT tools and systems to make sure that activities are successful
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Unit01.html">
+                                Outcome 3: Develop and test solutions to improve ongoing use of IT tools and systems
+                            </a>
+                        </li>
+                    </ul>
 
-                    <a href="Unit02.html">
-                        <h4>Unit 2: Website Software</h4>
-                        <ul>
-                            <li>Outcome 1: Create structures and styles for a webpage</li>
-                            <li>Outcome 2: Using website software tools to prepare content for sites</li>
-                            <li>Outcome 3: Publish websites</li>
-                        </ul>
-                        <br />
-                    </a>
+                    <br />
+
+                    <h4>Unit 2: Website Software</h4>
+                    <ul>
+                        <li>
+                            <a href="Unit02.html">
+                                Outcome 1: Create structures and styles for a webpage
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Unit02.html">
+                                Outcome 2: Using website software tools to prepare content for sites
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Unit02.html">
+                                Outcome 3: Publish websites
+                            </a>
+                        </li>
+                    </ul>
+                    <br />
                 </div>
 
             </div>
         </div>
     </div>
-<!--
-    <div class="contentWrapper">
-        <div class="BodyContent">
-            <div class="BodyContentInner">
-                <h3>Additional body content - Title</h3>
-                <h4>Additional body content - subTitle</h4>
-                <p>Text</p>
+    <!--
+        <div class="contentWrapper">
+            <div class="BodyContent">
+                <div class="BodyContentInner">
+                    <h3>Additional body content - Title</h3>
+                    <h4>Additional body content - subTitle</h4>
+                    <p>Text</p>
+                </div>
             </div>
         </div>
-    </div>
-    -->
+        -->
     <div class="contentWrapper">
         <div class="FooterContent">
             <div id="txtFooterText" class="FooterContentText"></div>

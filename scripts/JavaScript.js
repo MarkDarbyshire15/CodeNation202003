@@ -1,77 +1,4 @@
-﻿//FUNCTION: CREATE TOOL ITEMS TABLE
-function getTools() {
-
-    let HTMLoutput = ''  //The output
-    
-    let itemsPerRowCount = 5                                   //Items in a row
-    HTMLoutput += '<table class="tblToolTable" border="0">'  //Table Start
-
-
-    HTMLoutput += '    <tr class="tblToolTableTR">'          //TR Start
-    //add TD item
-    HTMLoutput += getToolItemHTML(itemsPerRowCount, 'JavaScript cheat sheet', 'images/browser.jpg', 'https://htmlcheatsheet.com/js/',
-        'Examples of loops, variables, objects, data types, strings, events and more.')
-    //add TD item
-    HTMLoutput += getToolItemHTML(itemsPerRowCount, 'CSS cheat sheet', 'images/browser.jpg', 'https://htmlcheatsheet.com/css/',
-        'Common CSS styles for background, font-family, borders etc with generators and more.')
-    //add TD item
-    HTMLoutput += getToolItemHTML(itemsPerRowCount, 'HTML cheat sheet', 'images/browser.jpg', 'https://htmlcheatsheet.com/',
-        'Useful HTML examples and web developer tools, markup generators and more.')
-    //add TD item
-    HTMLoutput += getToolItemHTML(itemsPerRowCount, 'Google Fonts', 'images/browser.jpg', 'https://fonts.google.com/',
-        'A robust collection of open source designer web fonts by google.')
-    //add TD item
-    HTMLoutput += getToolItemHTML(itemsPerRowCount, 'MDN web Docs', 'images/browser.jpg', 'https://developer.mozilla.org/en-US/',
-        'HTML, CSS and JaveScript and more resources for developers, by developers.')
-    HTMLoutput += '    </tr>'                                // TR Finish
-
-
-
-    HTMLoutput += '    <tr class="tblToolTableTR">'          //TR Start
-    //add TD item
-    HTMLoutput += getToolItemHTML(itemsPerRowCount, 'CodePen', 'images/browser.jpg', 'https://codepen.io/',
-        'Build, test, and discover code online.')
-    //add TD item
-    HTMLoutput += getToolItemHTML(itemsPerRowCount, 'VS Code', 'images/browser.jpg', 'https://code.visualstudio.com/',
-        'Multi-platform open source code editing application by Microsoft.')
-    //add TD item
-    HTMLoutput += getToolItemHTML(itemsPerRowCount, 'GitHub', 'images/browser.jpg', 'https://github.com/',
-        'From open source to business, host and review code, manage projects, and build software alongside other developers.')
-    //add TD item
-    HTMLoutput += getToolItemHTML(itemsPerRowCount, 'Slack', 'images/browser.jpg', 'https://slack.com/',
-        'Global collaboration and information sharing in channels – organised spaces for everything related to a project, topic or team.')
-    //add TD item
-    HTMLoutput += getToolItemHTML(itemsPerRowCount, 'Trello', 'images/browser.jpg', 'https://trello.com/',
-        'Global collaboration and information sharing in boards - lists, and cards enable you to organize and prioritize.')
-    HTMLoutput += '    </tr>'                                // TR Finish
-
-
-
-    HTMLoutput += '</table>'                                 //Table Finish
-    return HTMLoutput //Return the HTML table
-
-}
-
-function getToolItemHTML(itemsCount, txtTitle, txtImage, txtHref, txtDesc) {
-    let widthTD = 100 / itemsCount
-    let HTMLitem = ''
-    HTMLitem += '<td class="tblToolTableTD" width="' + widthTD + '%">'
-    HTMLitem += '  <div class="divTool">'
-    HTMLitem += '    <a href="' + txtHref + '" target="_blank" class="" title="' + txtTitle + '">'
-    HTMLitem += '      <div class="divToolContent">'
-    HTMLitem += '        <div class="divToolInner">'
-    HTMLitem += '          <span class="divToolInfTitle">'   + txtTitle + '</span>'
-    HTMLitem += '          <img class="divToolInfImg" src="' + txtImage + '" alt="' + txtTitle + '" />'
-    HTMLitem += '          <span class="divToolInfText">'    + txtDesc  + '</span>'
-    HTMLitem += '        </div>'
-    HTMLitem += '      </div>'
-    HTMLitem += '    </a>'
-    HTMLitem += '  </div>'
-    HTMLitem += '</td>'
-    return HTMLitem
-}
-
-//FUNCTION: CREATE FOOTER TEXT
+﻿//FUNCTION: CREATE FOOTER TEXT
 //const getPageFooterText = () => {
 function getPageFooterText() {
     let yWritten = 2020
@@ -84,31 +11,10 @@ function getPageFooterText() {
     }
 }
 
-//FUNCTION: CREATE MENU
-//const getNavBar = (pageFileName) => {
-function getNavBar (pageFileName) { 
-
-    let navHTML = "";
-
-    //Nav item
-    if (pageFileName == 'index.html') { navHTML += "<a class='Active' title='Home'>Home</a>" }
-    else { navHTML += "<a href='index.html'  title='Home'    >Home</a>" }
-    //Nav item
-    if (pageFileName == 'unit01.html') { navHTML += "<a class='Active' title='Unit 1 Outcome'>Unit 1 Outcome</a>" }
-    else { navHTML += "<a                href='unit01.html'  title='Unit 1 Outcome'   >Unit 1 Outcome</a>" }
-    //Nav item
-    if (pageFileName == 'unit02.html') { navHTML += "<a class='Active' title='Unit 2 Outcome'>Unit 2 Outcome</a>" }
-    else { navHTML += "<a                href='unit02.html'  title='Unit 2 Outcome'   >Unit 2 Outcome</a>" }
-    //Nav item
-    if (pageFileName == 'about.html') { navHTML += "<a class='Active' title='About'>About</a>" }
-    else { navHTML += "<a                href='about.html'  title='About'   >About</a>" }
-    //Return the above navBar links
-    return navHTML;
-}
 
 //FUNCTION: EXPAND/COLLAPSE the following element sibling
 //const addEventListener_BodyContentExpand = () => {
-function addEventListener_BodyContentExpand () {
+function addEventListener_BodyContentExpand() {
     let coll = document.getElementsByClassName("btnBodyContentCollapse");
     let i;
     for (i = 0; i < coll.length; i++) {
@@ -126,3 +32,90 @@ function addEventListener_BodyContentExpand () {
         });
     }
 }
+
+//FUNCTION: CREATE MENU
+//const getNavBar = (pageFileName) => {
+function getNavBar(pageFileName) {
+
+    let navHTML = "";
+
+    navHTML += '<div class="fcNavBox fcNavBoxSpacer"></div>'
+
+    //Nav item
+    if (pageFileName == 'index.html') { navHTML += '<div class="fcNavBox fcNavBoxItem"><a class="Active" href="index.html" title="Index" target="">Index</a></div>'
+    } else { navHTML += '<div class="fcNavBox fcNavBoxItem"><a href="index.html" title="Index" target="">Index</a></div>' }
+
+    //Nav item
+    if (pageFileName == 'unit01.html') { navHTML += '<div class="fcNavBox fcNavBoxItem"><a class="Active" href="unit01.html" title="Unit 1" target="">Unit 1</a></div>'
+    } else { navHTML += '<div class="fcNavBox fcNavBoxItem"><a href="unit01.html" title="Unit 1" target="">Unit 1</a></div>' }
+
+    //Nav item
+    if (pageFileName == 'unit02.html') { navHTML += '<div class="fcNavBox fcNavBoxItem"><a class="Active" href="unit02.html" title="Unit 2" target="">Unit 2</a></div>'
+    } else { navHTML += '<div class="fcNavBox fcNavBoxItem"><a href="unit02.html" title="Unit 2" target="">Unit 2</a></div>' }
+
+    //Nav item
+    if (pageFileName == 'about.html') { navHTML += '<div class="fcNavBox fcNavBoxItem"><a class="Active" href="about.html" title="About" target="">About</a></div>'
+    } else { navHTML += '<div class="fcNavBox fcNavBoxItem"><a href="about.html" title="About" target="">About</a></div>' }
+
+    return navHTML;
+}
+
+
+//FUNCTION: CREATE TOOL ITEMS INFO
+function getTools() {
+
+    let HTMLoutput = ''  //The output
+
+    //add tool
+    HTMLoutput += getToolItemHTML('JavaScript cheat sheet', 'images/browser.jpg', 'https://htmlcheatsheet.com/js/',
+        'Examples of loops, variables, objects, data types, strings, events and more.')
+    //add tool
+    HTMLoutput += getToolItemHTML('CSS cheat sheet', 'images/browser.jpg', 'https://htmlcheatsheet.com/css/',
+        'Common CSS styles for background, font-family, borders etc with generators and more.')
+    //add tool
+    HTMLoutput += getToolItemHTML('HTML cheat sheet', 'images/browser.jpg', 'https://htmlcheatsheet.com/',
+        'Useful HTML examples and web developer tools, markup generators and more.')
+    //add tool
+    HTMLoutput += getToolItemHTML('Google Fonts', 'images/browser.jpg', 'https://fonts.google.com/',
+        'A robust collection of open source designer web fonts by google.')
+    //add tool
+    HTMLoutput += getToolItemHTML('MDN web Docs', 'images/browser.jpg', 'https://developer.mozilla.org/en-US/',
+        'HTML, CSS and JaveScript and more resources for developers, by developers.')
+    //add tool
+    HTMLoutput += getToolItemHTML('CodePen', 'images/browser.jpg', 'https://codepen.io/',
+        'Build, test, and discover code online.')
+    //add tool
+    HTMLoutput += getToolItemHTML('VS Code', 'images/browser.jpg', 'https://code.visualstudio.com/',
+        'Multi-platform open source code editing application by Microsoft.')
+    //add tool
+    HTMLoutput += getToolItemHTML('GitHub', 'images/browser.jpg', 'https://github.com/',
+        'From open source to business, host and review code, manage projects, and build software alongside other developers.')
+    //add tool
+    HTMLoutput += getToolItemHTML('Slack', 'images/browser.jpg', 'https://slack.com/',
+        'Global collaboration and information sharing in channels – organised spaces for everything related to a project, topic or team.')
+    //add tool
+    HTMLoutput += getToolItemHTML('Trello', 'images/browser.jpg', 'https://trello.com/',
+        'Global collaboration and information sharing in boards - lists, and cards enable you to organize and prioritize.')
+
+    return HTMLoutput //Return the HTML
+
+}
+
+
+function getToolItemHTML(txtTitle, txtImage, txtHref, txtDesc) {
+    let HTMLitem = ''
+    HTMLitem += '    <div class="fcToolsBoxItem">'
+    HTMLitem += '        <a title="' + txtTitle + '" href="' + txtHref + '" target="_blank">'
+    HTMLitem += '            <div class="fcToolsBoxItemTitle">' + txtTitle + '</div>'
+    HTMLitem += '            <div class="fcToolsBoxItemLink">'
+    HTMLitem += '                <img src="' + txtImage + '" alt="' + txtTitle + '" />'
+    HTMLitem += '            </div>'
+    HTMLitem += '            <div class="fcToolsBoxItemDesc">' + txtDesc + '</div>'
+    HTMLitem += '        </a>'
+    HTMLitem += '    </div>'
+    return HTMLitem;
+}
+
+
+
+

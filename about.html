@@ -13,8 +13,8 @@
             document.title = pTitle1 + ' - ' + pTitle2
             document.getElementById('txtPageTitle').innerHTML = pTitle1;                                          //Write out the page title
             document.getElementById('txtPageTitleSub').innerHTML = pTitle2;                                       //Write out the page sub title
-            document.getElementById('navButtons').innerHTML = getNavBar(location.pathname.split("/").slice(-1));  //Write out the NavBar
             document.getElementById("txtFooterText").innerHTML = getPageFooterText();                             //Write out the footer message
+            document.getElementById('navButtons').innerHTML = getNavBar(location.pathname.split("/").slice(-1));  //Write out the NavBar
             //document.getElementById("txtTools").innerHTML = getTools();                                         //Write out the Tool items
             //addEventListener_BodyContentExpand()                                                                //Add the expand/collapse script
         }
@@ -23,20 +23,21 @@
 <body onload="pageInitialise()">
     <div class="contentWrapper">
         <div class="HeaderContent">
-            <div class="HeaderContentLogo">
-                <a href="Index.html" target="_top" title="Home">
-                    <img src="images/www2.png" alt="Home" class="HeaderContentLogoImg" />
-                </a>
-            </div>
-            <div class="HeaderContentTitle">
-                <h1 id="txtPageTitle">## Page Title ##</h1>
-                <h2 id="txtPageTitleSub">## Page Subtitle ##</h2>
+            <div class="fcTitle">
+                <div class="fcTitleBox fcTitleBoxImage">
+                    <a href="Index.html" target="_top" title="Home"><img src="images/www2.png" alt="Home" /></a>
+                </div>
+                <div class="fcTitleBox fcTitleBoxTitle">
+                    <h1 id="txtPageTitle">Title</h1>
+                    <h2 id="txtPageTitleSub">TitleSub</h2>
+                </div>
             </div>
         </div>
     </div>
     <div class="contentWrapper">
         <div class="NavContent">
-            <div class="NavContentInner" id="navButtons">getNavBar</div>
+            <div id="navButtons" class="fcNav">
+            </div>
         </div>
     </div>
     <div class="contentWrapper">
