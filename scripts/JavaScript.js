@@ -42,20 +42,24 @@ function getNavBar(pageFileName) {
     navHTML += '<div class="fcNavBox fcNavBoxSpacer"></div>'
 
     //Nav item
-    if (pageFileName == 'index.html') { navHTML += '<div class="fcNavBox fcNavBoxItem"><a class="Active" href="index.html" title="Index" target="">Index</a></div>'
-    } else { navHTML += '<div class="fcNavBox fcNavBoxItem"><a href="index.html" title="Index" target="">Index</a></div>' }
+    if (pageFileName == 'index.html') {
+        navHTML += '<div class="fcNavBox fcNavBoxItem"><a class="Active" href="index.html" title="Index" target="_self">Index</a></div>'
+    } else { navHTML += '<div class="fcNavBox fcNavBoxItem"><a href="index.html" title="Index" target="_self">Index</a></div>' }
 
     //Nav item
-    if (pageFileName == 'unit01.html') { navHTML += '<div class="fcNavBox fcNavBoxItem"><a class="Active" href="unit01.html" title="Unit 1" target="">Unit 1</a></div>'
-    } else { navHTML += '<div class="fcNavBox fcNavBoxItem"><a href="unit01.html" title="Unit 1" target="">Unit 1</a></div>' }
+    if (pageFileName == 'unit01.html') {
+        navHTML += '<div class="fcNavBox fcNavBoxItem"><a class="Active" href="unit01.html" title="Unit 1" target="_self">Unit 1</a></div>'
+    } else { navHTML += '<div class="fcNavBox fcNavBoxItem"><a href="unit01.html" title="Unit 1" target="_self">Unit 1</a></div>' }
 
     //Nav item
-    if (pageFileName == 'unit02.html') { navHTML += '<div class="fcNavBox fcNavBoxItem"><a class="Active" href="unit02.html" title="Unit 2" target="">Unit 2</a></div>'
-    } else { navHTML += '<div class="fcNavBox fcNavBoxItem"><a href="unit02.html" title="Unit 2" target="">Unit 2</a></div>' }
+    if (pageFileName == 'unit02.html') {
+        navHTML += '<div class="fcNavBox fcNavBoxItem"><a class="Active" href="unit02.html" title="Unit 2" target="_self">Unit 2</a></div>'
+    } else { navHTML += '<div class="fcNavBox fcNavBoxItem"><a href="unit02.html" title="Unit 2" target="_self">Unit 2</a></div>' }
 
     //Nav item
-    if (pageFileName == 'about.html') { navHTML += '<div class="fcNavBox fcNavBoxItem"><a class="Active" href="about.html" title="About" target="">About</a></div>'
-    } else { navHTML += '<div class="fcNavBox fcNavBoxItem"><a href="about.html" title="About" target="">About</a></div>' }
+    if (pageFileName == 'about.html') {
+        navHTML += '<div class="fcNavBox fcNavBoxItem"><a class="Active" href="about.html" title="About" target="_self">About</a></div>'
+    } else { navHTML += '<div class="fcNavBox fcNavBoxItem"><a href="about.html" title="About" target="_self">About</a></div>' }
 
     return navHTML;
 }
